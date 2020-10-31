@@ -1,0 +1,21 @@
+/* ------------CSS RESET--------------- */
+@import "./reset.css";
+
+/* ------------CSS VARIABLE--------------- */
+:root{
+    /* --blue-color: blue; */
+}
+/* ------------Common CSS--------------- */
+html{
+    font-size: 16px;
+}
+
+
+
+
+
+
+/* ------------CSS RESET--------------- */
+/* @media(min-width:768px){
+
+} */
