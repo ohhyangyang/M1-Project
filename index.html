@@ -1,50 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--google font-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <title>CosLib</title>
 
-    <link rel="stylesheet" href="css/main.css"/>
-    <link rel="stylesheet" href="css/burger-menu.css"/>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/burger-menu.css" />
+    <script src="./scripts/babel.min.js"></script>
 </head>
 
 <body>
+
     <!----------NAV BAR----------------------->
     <nav>
         <div class="nav-container">
-            <!--CosLib logo-->
-            <a href="index.html"><img src="images/coslib.png" alt="CosLibLogo"></a>
-            <!--burger icon-->
-            <a><img src="images/burger.png" alt="burgerMenu" class="burger-icon"></a>
-            <!--nav menu-->
-            <ul>
-                <li><a href="dashboard.html">Beauty Library</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
+
+            <div class="logo-burger-wrapper">
+
+                <!--burger icon-->
+                <a href="#"><img src="images/burger.png" alt="burgerMenu" class="burger-icon"></a>
+                <!--CosLib logo-->
+                <a href="index.html"><img src="images/coslib.svg" alt="CosLibLogo" class="brand-logo"></a>
+                <div class="empty-div"></div>
+
+            </div>
+
+
+            <div class="slider-wrapper">
+                <!--close-->
+                <a href="#"><img src="./images/close.png" alt="closeicon" class="close-icon"></a>
+                <!--nav menu-->
+                <ul id="nav-menu" class="hide-menu">
+                    <li><a href="dashboard.html">Beauty Library</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+
+                </ul>
+            </div>
         </div>
+
     </nav>
-    
+
     <!----------MAIN------------------------------>
     <main>
 
-        <!-- Best Seller-->
+        <!-- big img-->
         <section>
             <div class="big-img-container">
-                <p class="welcome-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur vel atque dicta tempora assumenda magni hic numquam quasi voluptas suscipit illum, impedit animi, quam, ducimus quisquam! Est voluptatem nisi corrupti!</p>
-                <div class="most-popular-button">Most popular</div>
+                <div class="type-a-container">
+                    <a href="" id="blush">Blush</a>
+                    <a href="" id="bronzer">Bronzer</a>
+                    <a href="" id="eyebrow">Eyebrow</a>
+                    <a href="" id="eyeliner">Eyeliner</a>
+                    <a href="" id="eyeshadow">Eyeshadow</a>
+                    <a href="" id="foundation">Foundation</a>
+                    <a href="dashboard.html?product_type=lip_liner" id="lip_liner">Lip liner</a>
+                    <a href="" id="lipstick">Lipstick</a>
+                    <a href="" id="mascara">Mascara</a>
+                    <a href="dashboard.html" id="nail_polish">Nail polish</a>
+                    
+                </div>
             </div>
         </section>
 
 
         <!--Brands Gallery-->
-        <section>
-            <img src="./images/text-circle.jpg" alt="becauseWeAreGorgeous">
+        <section class="brands-gallery">
 
-            <p>Top 10 brands</p>
+            <img src="./images/text-circle.jpg" alt="becauseWeAreGorgeous" class="spinning-circle">
+
+            <h4>Top 10 brands</h4>
             <div class="top-10-brands-container">
+                <a href="#"><img src="" alt="benefitlogo"></a>
+                <a><img src="" alt="benefitlogo"></a>
+                <a><img src="" alt="benefitlogo"></a>
+                <a><img src="" alt="benefitlogo"></a>
+                <a><img src="" alt="benefitlogo"></a>
+                <a><img src="" alt="benefitlogo"></a>
+                <a><img src="" alt="benefitlogo"></a>
+                <a><img src="" alt="benefitlogo"></a>
+                <a><img src="" alt="benefitlogo"></a>
                 <!--
                     benefit
                     fenty
@@ -66,29 +110,31 @@
     <footer>
 
         <div class="footer-container">
-            <img src="./images/coslib.png"/>
+            <img src="./images/coslib.svg" alt="CosLibLogo" class="brand-logo-footer" />
 
             <div class="followus-container">
-                <p>Follow Us</p>
+                <p class="footer-title">Follow Us</p>
                 <a href="#"><img src="./images/twitter.png" alt="twitterlogo"></a>
                 <a href="#"><img src="./images/instagram.png" alt="twitterlogo"></a>
                 <a href="#"><img src="./images/facebook.png" alt="twitterlogo"></a>
             </div>
 
             <div class="contactus-container">
-                    <p>Contact Us</p>
-                    <p>hola@coslib.com</p>
-                
+                <p class="footer-title">Contact Us</p>
+                <p class="footer-text">hello@coslib.com</p>
+
             </div>
 
-            <div class="aboutus-container">               
-                    <p>About Us</p>
-                    <a href="faq.html">who we are</a>               
+            <div class="aboutus-container">
+                <p class="footer-title">About Us</p>
+                <a href="faq.html" class="footer-text">who we are</a>
             </div>
         </div>
 
     </footer>
-
-
+    <script src="scripts/Database.js"></script>
+    <script src="./scripts/ApiService.js"></script>
+    <script src="./scripts/Index.js"></script>
 </body>
+
 </html>

@@ -1,26 +1,391 @@
 /* ------------CSS RESET--------------- */
 @import "./reset.css";
 
-/* ------------CSS VARIABLE--------------- */
-:root{
-    /* --blue-color: blue; */
+/* ------------CSS VARIABLE---------- */
+:root {
+  --white-color: #fff;
+  --hazeblue-color: rgb(202, 218, 224);
+  --bgpink-color: rgb(245, 221, 221);
 }
-/* ------------Common CSS--------------- */
-html{
-    font-size: 16px;
+/* ------------Common CSS------------------------------- */
+
+html {
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: 400;
+}
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  /* height: 100vh; */
 }
 
-.burger-icon{
-    width: 50px;
-    height: auto;
+/*-------Nav bar--------*/
+nav {
+  position: fixed;
+  top: 0;
+  /* width: 100vw; */
+  z-index: 999;
+  box-sizing: border-box;
 }
 
+/* .nav-container {
+  height: 500px;
+} */
+.logo-burger-wrapper {
+  width: 100vw;
+  box-sizing: border-box;
+  border: gray 1px solid;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 20px 20px;
+  height: 100px;
+}
 
+.empty-div {
+  width: 30px;
+}
 
+.brand-logo {
+  width: 150px;
+  height: auto;
+}
+.burger-icon {
+  width: 30px;
+  height: auto;
+}
 
+.menubar-height {
+  height: 100px;
+}
 
+/*--hidded--*/
+.slider-wrapper {
+  position: absolute;
+  top: 0;
+  right: 100vw;
+  padding-top: 30px;
+  background-color: oldlace;
+  width: 100vw;
+  height: 100vh;
+  transition: right 0.5s;
+}
+.close-icon {
+  border: 1px gray solid;
+  border-radius: 50%;
+  width: 30px;
+  height: auto;
+  margin-left: 20px;
+}
+#nav-menu li {
+  margin: 30px 0px;
+  margin-left: 20px;
+}
+#nav-menu a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #06456e;
+}
 
-/* ------------CSS RESET--------------- */
+/*-------Footer--------*/
+footer {
+  background-color: var(--hazeblue-color);
+}
+footer p {
+  color: rgb(18, 25, 53);
+}
+.footer-container {
+  margin-left: 20px;
+}
+
+.brand-logo-footer {
+  margin: 20px 0;
+  width: 100px;
+  height: auto;
+  opacity: 0.9;
+}
+.footer-container > div {
+  padding-bottom: 20px;
+}
+.footer-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.followus-container img {
+  width: 20px;
+  height: auto;
+  margin: 5px;
+}
+.aboutus-container a {
+  text-decoration: none;
+}
+.footer-text {
+  color: #06456e;
+}
+
+/*-------INDEX-Big Img--------*/
+.big-img-container {
+  background-image: url(../images/bigImg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 36rem;
+  display: flex;
+  flex-direction: column-reverse;
+  
+  
+}
+.type-a-container {
+  /* height: 10rem; */
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+  /* background-color: violet; */
+  /* top: -10rem; */
+  
+}
+
+.type-a-container a {
+  /* background-color: aqua; */
+  display: inline-block;
+  margin: 10px 5px;
+  color: var(--white-color);
+  font-size: 28px;
+  font-family: IBM Plex Serif;
+  font-style: italic;
+  font-weight: 300;
+}
+.type-a-container a:hover{
+  color: #ec0021;
+  font-weight: 400;
+}
+
+/*-------INDEX- Brands Gallery--------*/
+.brands-gallery {
+  text-align: center;
+}
+
+.spinning-circle {
+  display: table;
+  width: 100px;
+  margin: 60px auto 20px;
+  animation-name: spin;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.brands-gallery h4 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+/*-------Dashboard-MAIN--------*/
+.filter-container {
+  background-color: oldlace;
+  padding: 0 15px;
+}
+.brand-list-wrapper {
+  height: 60px;
+  position: relative;
+}
+.type-list-wrapper {
+  height: 60px;
+  position: relative;
+}
+.filter-container select {
+  appearance: none;
+  -webkit-appearance: none;
+  border: gainsboro solid 1px;
+  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  background-color: var(--white-color);
+  padding: 20px 16px 8px;
+  font-size: 17px;
+
+  position: absolute;
+}
+.filter-container label {
+  font-size: 10px;
+  font-weight: 300;
+  color: gray;
+
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  z-index: 1;
+}
+.filter-container .select-arrow {
+  width: 30px;
+  opacity: 0.6;
+
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  top: 8px;
+}
+.items-length {
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+
+/*-------Signup-MAIN--------*/
+.signup-container {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: #f2d4d6;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23a5b4c7' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+  padding: 20px 20px;
+}
+.signup-bgcolor {
+  background-color: var(--white-color);
+}
+.signup-container h3 {
+  padding-top: 30px;
+  display: table;
+  margin: 0 auto;
+  font-size: 25px;
+  font-weight: 500;
+}
+.signup-container .signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signup-container input {
+  width: 80%;
+  padding: 15px;
+  margin-top: 10px;
+  border: gainsboro solid 1px;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 5px;
+}
+.signup-container button {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 15px;
+  width: 80%;
+  border-radius: 5px;
+  border: none;
+  background-color: hotpink;
+  font-size: 16px;
+  color: var(--white-color);
+}
+
+/*-------Login-MAIN--------*/
+.login-container {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: #f2d4d6;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23a5b4c7' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+  padding: 20px 20px;
+}
+.login-bgcolor {
+  background-color: var(--white-color);
+}
+.login-container h3 {
+  padding-top: 30px;
+  display: table;
+  margin: 0 auto;
+  font-size: 25px;
+  font-weight: 500;
+}
+.login-container .welcome {
+  padding-top: 30px;
+  display: table;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 400;
+}
+.login-container .login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-container input {
+  width: 80%;
+  padding: 15px;
+  margin-top: 10px;
+  border: gainsboro solid 1px;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 5px;
+}
+.login-container button {
+  margin-top: 10px;
+  padding: 15px;
+  width: 80%;
+  border-radius: 5px;
+  border: none;
+
+  font-size: 16px;
+  color: var(--white-color);
+}
+.login-container #login-button {
+  margin-bottom: 10px;
+  background-color: hotpink;
+}
+.login-container #signup-button {
+  margin-bottom: 30px;
+  background-color: var(--white-color);
+  color: hotpink;
+  border: hotpink 1px solid;
+}
+
+/*-------FAQs-MAIN--------*/
+
+.faqs-container {
+  width: 100vw;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #f2d4d6;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23a5b4c7' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+  padding: 30px;
+}
+.faqs-container h3 {
+  display: table;
+  margin: 0 auto;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.faqs-container > p {
+  font-weight: 300;
+  /* text-align: justify; */
+}
+.faqs-container .question-card-container {
+  display: table;
+  margin: 20px auto;
+  background-color: rgb(179, 197, 209);
+  margin-bottom: 20px;
+  width: 180px;
+  height: 180px;
+}
+.question-card-container p:nth-child(1) {
+  font-family: IBM Plex Serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 20px;
+  padding: 50px 5px 0;
+  color: var(--white-color);
+}
+
+/* ------------media query--------------- */
 /* @media(min-width:768px){
 
 } */

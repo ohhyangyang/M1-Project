@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>CosLib - Beauty Librery</title>
 
     <link rel="stylesheet" href="css/main.css" />
@@ -14,49 +16,57 @@
     <!----------NAV BAR----------------------->
 
     <!----------MAIN----------------------->
+    <div class="menubar-height"></div>
     <main>
         <div class="filter-container">
-            <p class="items-length"> xx produtcs</p>
+            <p class="items-length"> xx items</p>
+            
+            <div class="brand-list-wrapper">
+                <label for="brandList">Filter by brands:</label>
+                <img src="./images/select arrow.png" alt="selectboxarrow" class="select-arrow">
+                <select id="brandList">
+                    <option value="">All brands</option>
+                    <option value="">almay</option>
+                    <option value="">alva</option>
+                    <option value="">almay</option>
+                    <option value="">alva</option>
+                    <option value="">almay</option>
+                    <option value="">alva</option>
+                    <option value="">almay</option>
+                    <option value="">alva</option>
+                </select>
+            </div>
 
-            <label for="brandList">Filter by brands:</label>
-            <select id="brandList">
-                <option value="">All brands</option>
-                <option value="">almay</option>
-                <option value="">alva</option>
-                <option value="">almay</option>
-                <option value="">alva</option>
-                <option value="">almay</option>
-                <option value="">alva</option>
-                <option value="">almay</option>
-                <option value="">alva</option>
-            </select>
-
-            <label for="typeList">Filter by types:</label>
-            <select id="typeList">
-                <option value="">All types</option>
-                <option value="">Blush</option>
-                <option value="">Bronzer</option>
-                <option value="">Eyebrow</option>
-                <option value="">Eyeliner</option>
-                <option value="">Eyeshadow</option>
-                <option value="">Foundation</option>
-                <option value="">Lip liner</option>
-                <option value="">Lipstick</option>
-                <option value="">Mascara</option>
-                <option value="">Nail polish</option>
-            </select>
+            <div class="type-list-wrapper">
+                <label for="typeList">Filter by types:</label>
+                <img src="./images/select arrow.png" alt="selectboxarrow" class="select-arrow">
+                <select id="typeList">
+                    <option value="">All types</option>
+                    <option value="">Blush</option>
+                    <option value="">Bronzer</option>
+                    <option value="">Eyebrow</option>
+                    <option value="">Eyeliner</option>
+                    <option value="">Eyeshadow</option>
+                    <option value="">Foundation</option>
+                    <option value="">Lip liner</option>
+                    <option value="">Lipstick</option>
+                    <option value="">Mascara</option>
+                    <option value="">Nail polish</option>
+                </select>
+            </div>
 
             <!-- <button>Reset</button> -->
         </div>
 
         <div class="products-container">
-            
+
         </div>
 
 
 
     </main>
-
+ 
+    <script src="./scripts/ApiService.js"></script>
     <!----------FOOTER----------------------->
 
 </body>
