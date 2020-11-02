@@ -184,17 +184,37 @@ footer p {
     transform: rotate(360deg);
   }
 }
+.brands-gallery{
+  box-sizing: border-box;
+  padding: 20px;
+  margin-bottom: 50px;
+}
 .brands-gallery h4 {
   font-size: 25px;
   font-weight: 500;
+}
+.brands-gallery img{
+  display: inline-block;
+  
+  width: 40%;
+  margin:10px;
+}
+.brands-gallery a:last-child{
+  /* text-decoration: none; */
+  color: #06456e;
+}
+.brands-gallery a:last-child:hover{
+  color: #06456e;
 }
 
 /*-------Dashboard-MAIN--------*/
 .filter-container {
   background-color: oldlace;
   padding: 0 15px;
+  width: 100vw;
+  box-sizing: border-box;
 }
-.brand-list-wrapper {
+/* .brand-list-wrapper {
   height: 60px;
   position: relative;
 }
@@ -233,13 +253,36 @@ footer p {
   z-index: 1;
   right: 1rem;
   top: 8px;
-}
+} */
 .items-length {
   padding-top: 30px;
   padding-left: 10px;
   padding-bottom: 10px;
   font-size: 15px;
 }
+#search-input{
+  appearance: none;
+  -webkit-appearance: none;
+  border: gainsboro solid 1px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  background-color: var(--white-color);
+  padding: 1px 8px;
+  font-size: 17px;
+}
+
+.products-container div img{
+  width: 15rem;
+  
+}
+.products-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 /*-------Signup-MAIN--------*/
 .signup-container {

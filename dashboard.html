@@ -19,9 +19,10 @@
     <div class="menubar-height"></div>
     <main>
         <div class="filter-container">
+            
             <p class="items-length"> xx items</p>
             
-            <div class="brand-list-wrapper">
+            <!-- <div class="brand-list-wrapper">
                 <label for="brandList">Filter by brands:</label>
                 <img src="./images/select arrow.png" alt="selectboxarrow" class="select-arrow">
                 <select id="brandList">
@@ -53,20 +54,27 @@
                     <option value="">Mascara</option>
                     <option value="">Nail polish</option>
                 </select>
-            </div>
+            </div> -->
+
+            <input id="search-input" type="text" placeholder="Search.." style="user-select: auto;">
 
             <!-- <button>Reset</button> -->
         </div>
 
         <div class="products-container">
+            <div class="testingbox"><img src="./images/benefit.png" alt=""></div>
 
         </div>
 
 
 
     </main>
+    
  
+    <script src="./scripts/QueryFilter.js"></script>
     <script src="./scripts/ApiService.js"></script>
+    
+    <!-- <script src="./scripts/superherotest.js"></script> -->
     <!----------FOOTER----------------------->
 
 </body>
