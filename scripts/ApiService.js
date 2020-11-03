@@ -16,7 +16,7 @@ proxyUrl = "";
 //开始fetch
 fetch(
   proxyUrl +
-    `http://makeup-api.herokuapp.com/api/v1/products.json?${brandQuery}`
+    `https://makeup-api.herokuapp.com/api/v1/products.json?${brandQuery}`
 )
   .then((response) => {
     console.log("response", response);
@@ -105,7 +105,7 @@ typeSelect.addEventListener("change", function (event) {
   const tagQuery = `&product_type=${event.target.value}`;
 
   fetch(
-    `http://makeup-api.herokuapp.com/api/v1/products.json?${brandQuery}${tagQuery}`
+    `https://makeup-api.herokuapp.com/api/v1/products.json?${brandQuery}${tagQuery}`
   )
     //fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=lipstick`)
     .then((response) => {
