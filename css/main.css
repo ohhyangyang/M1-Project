@@ -35,11 +35,13 @@ nav {
 .logo-burger-wrapper {
   width: 100vw;
   box-sizing: border-box;
-  border: gray 1px solid;
+  /* border: gray 1px solid; */
   display: flex;
   justify-content: space-between;
   padding: 30px 20px 20px;
   height: 100px;
+  transition: background-color 0.5s;
+  /* background-color: var(--white-color); */
 }
 
 .empty-div {
@@ -131,24 +133,42 @@ footer p {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 36rem;
+  height: 100vh;
   display: flex;
   flex-direction: column-reverse;
+  padding: 15px;
+  box-sizing: border-box;
   
   
 }
-.type-a-container {
-  /* height: 10rem; */
+
+.big-img-container h2{
+  color: var(--white-color);
+  font-size: 25px;
+  font-family: IBM Plex Serif;
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 10px;
+
+}
+
+.big-img-container p{
+  color: var(--white-color);
+  font-style: italic;
+}
+
+
+/* .type-a-container {
+ 
   box-sizing: border-box;
   padding: 20px;
   position: relative;
-  /* background-color: violet; */
-  /* top: -10rem; */
+
   
 }
 
 .type-a-container a {
-  /* background-color: aqua; */
+
   display: inline-block;
   margin: 10px 5px;
   color: var(--white-color);
@@ -160,7 +180,7 @@ footer p {
 .type-a-container a:hover{
   color: #ec0021;
   font-weight: 400;
-}
+} */
 
 /*-------INDEX- Brands Gallery--------*/
 .brands-gallery {
@@ -203,22 +223,26 @@ footer p {
   /* text-decoration: none; */
   color: #06456e;
 }
-.brands-gallery a:last-child:hover{
-  color: #06456e;
-}
+
 
 /*-------Dashboard-MAIN--------*/
+.go-to-top img{
+  width: 20px;
+  position: fixed;
+  border: 0.5px solid black;
+  padding: 3px;
+  border-radius: 50%;
+  right: 10px;
+  bottom: 5vh;
+}
 .filter-container {
   background-color: oldlace;
   padding: 0 15px;
   width: 100vw;
   box-sizing: border-box;
 }
-/* .brand-list-wrapper {
-  height: 60px;
-  position: relative;
-}
-.type-list-wrapper {
+
+.type-select-wrapper {
   height: 60px;
   position: relative;
 }
@@ -253,25 +277,15 @@ footer p {
   z-index: 1;
   right: 1rem;
   top: 8px;
-} */
+}
 .items-length {
   padding-top: 30px;
   padding-left: 10px;
   padding-bottom: 10px;
   font-size: 15px;
+  font-weight: 300;
 }
-#search-input{
-  appearance: none;
-  -webkit-appearance: none;
-  border: gainsboro solid 1px;
-  border-radius: 5px;
-  box-sizing: border-box;
-  width: 100%;
-  height: 50px;
-  background-color: var(--white-color);
-  padding: 1px 8px;
-  font-size: 17px;
-}
+
 
 .products-container div img{
   width: 15rem;
@@ -282,7 +296,63 @@ footer p {
   flex-direction: column;
   align-items: center;
 }
+.product-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
 
+.product-box .product-img{
+  margin: 20px;
+}
+.product-box .name{
+  font-size: 12px;
+  
+  
+  
+}
+.product-box .tag-list{
+  font-style: italic;
+  background-color: crimson;
+  color: #fff;
+  padding: 3px;
+}
+.product-box .description{
+  color:  gray;
+  font-size: 10px;
+  font-weight: 300;
+}
+.product-box .more-text{
+  display: none;
+  color:  gray;
+  font-size: 10px;
+  font-weight: 300;
+}
+.product-box .showmore{
+  display:inline;
+  color: black;
+}
+.product-box .showless{
+  display:none;
+  color: black;
+}
+
+
+
+
+.dont-have-container img{
+  width: 15rem;
+  margin: 20px 0;
+}
+.dont-have-container{
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /*-------Signup-MAIN--------*/
 .signup-container {

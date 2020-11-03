@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <title>CosLib - Beauty Librery</title>
 
     <link rel="stylesheet" href="css/main.css" />
@@ -19,26 +23,44 @@
     <div class="menubar-height"></div>
     <main>
         <div class="filter-container">
-            
-            <p class="items-length"> xx items</p>
-            
-            <!-- <div class="brand-list-wrapper">
-                <label for="brandList">Filter by brands:</label>
+
+            <p class="items-length"> </p>
+
+            <div class="type-select-wrapper">
+                <label for="typeList">Filter by types:</label>
                 <img src="./images/select arrow.png" alt="selectboxarrow" class="select-arrow">
-                <select id="brandList">
-                    <option value="">All brands</option>
-                    <option value="">almay</option>
-                    <option value="">alva</option>
-                    <option value="">almay</option>
-                    <option value="">alva</option>
-                    <option value="">almay</option>
-                    <option value="">alva</option>
-                    <option value="">almay</option>
-                    <option value="">alva</option>
+                <select id="typeList">
+                    <option value="">all</option>
+                    <option value="blush">Blush</option>
+                    <option value="bronzer">Bronzer</option>
+                    <option value="eyebrow">Eyebrow</option>
+                    <option value="eyeliner">Eyeliner</option>
+                    <option value="eyeshadow">Eyeshadow</option>
+                    <option value="foundation">Foundation</option>
+                    <option value="lip_liner">Lip liner</option>
+                    <option value="lipstick">Lipstick</option>
+                    <option value="mascara">Mascara</option>
+                    <option value="nail_polish">Nail polish</option>
                 </select>
             </div>
 
-            <div class="type-list-wrapper">
+            <a href="#" class="go-to-top"><img src="./images/arrow.png" alt=""></a>
+
+            <!-- <div class="type-a-container">
+                    <a href="dashboard.html?product_type=blush" id="blush">Blush</a>
+                    <a href="dashboard.html?product_type=bronzer" id="bronzer">Bronzer</a>
+                    <a href="dashboard.html?product_type=eyebrow" id="eyebrow">Eyebrow</a>
+                    <a href="dashboard.html?product_type=eyeliner" id="eyeliner">Eyeliner</a>
+                    <a href="dashboard.html?product_type=eyeshadow" id="eyeshadow">Eyeshadow</a>
+                    <a href="dashboard.html?product_type=foundation" id="foundation">Foundation</a>
+                    <a href="dashboard.html?product_type=lip_liner" id="lip_liner">Lip liner</a>
+                    <a href="dashboard.html?product_type=lipstick" id="lipstick">Lipstick</a>
+                    <a href="dashboard.html?product_type=mascara" id="mascara">Mascara</a>
+                    <a href="dashboard.html?product_type=nail_polish" id="nail_polish">Nail polish</a>
+                    
+                </div> -->
+
+            <!-- <div class="type-list-wrapper">
                 <label for="typeList">Filter by types:</label>
                 <img src="./images/select arrow.png" alt="selectboxarrow" class="select-arrow">
                 <select id="typeList">
@@ -56,25 +78,35 @@
                 </select>
             </div> -->
 
-            <input id="search-input" type="text" placeholder="Search.." style="user-select: auto;">
+            <!-- <input id="search-input" type="text" placeholder="Search.." style="user-select: auto;"> -->
 
             <!-- <button>Reset</button> -->
         </div>
 
         <div class="products-container">
-            <div class="testingbox"><img src="./images/benefit.png" alt=""></div>
+            <!-- <div class="product-box">
+                <img src="./images/benefit.png" alt="">
+                
+                    <span class="name">benefit</span>
+                    <span class="tag-list">vegan free</span>
+                
 
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque eum doloremque minima molestiae quae perspiciatis in velit vero quasi suscipit. Deleniti ipsam, temporibus quisquam est officiis tempora totam eveniet vero.</p>
+            </div> -->
+        </div>
+        <div class="dont-have-container">
+            <p></p>
+            <img src="">
         </div>
 
 
 
     </main>
-    
- 
+
+
     <script src="./scripts/QueryFilter.js"></script>
     <script src="./scripts/ApiService.js"></script>
-    
-    <!-- <script src="./scripts/superherotest.js"></script> -->
+
     <!----------FOOTER----------------------->
 
 </body>
