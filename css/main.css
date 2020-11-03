@@ -387,6 +387,13 @@ footer p {
   font-weight: 300;
   border-radius: 5px;
 }
+.message-container{
+  color: red;
+  font-size: 10px;
+  width: 80%;
+  margin-top: 10px;
+  
+}
 .signup-container button {
   margin-top: 10px;
   margin-bottom: 30px;

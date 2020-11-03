@@ -15,6 +15,10 @@ class Validator {
     };
   }
 
+  getErrorsList = () => {
+    return this.errors;
+}
+
   validateEmail = (email) => {
       if(this.validateEmailSyntax(email)){
           delete this.errors.invalidEmailError;
@@ -29,6 +33,42 @@ class Validator {
       return emailRegEx.test(email);
   }
 
+  // validate if email is taken
+  validateUniqueEmail = (newEmail) =>{
+      const users = db.getAllUsers();
+
+      let emailUnique = true;
+
+      users.forEach((user)=>{
+          if(user.email === newEmail){
+              emailUnique = false;
+          }
+      });
+
+      if (emailUnique){
+          delete this.errors.emailExistsError;
+      }else{
+          this.errors.emailExistsError = this.emailExistsError;
+      }
+  };
+
+  validatePassword = (password) =>{
+      if(password.length >= 6){
+          delete this.errors.passwordError;
+      }else{
+          this.errors.passwordError = this.passwordError;
+      }
+  }
+
+  validateRepeatPassword = (password,repeatPassword) => {
+      if(password == repeatPassword){
+          delete this.errors.repeatPasswordError;
+      }else{
+          this.errors.repeatPasswordError = this.repeatPasswordError
+      }
+  }
+
+  
 
 
 }

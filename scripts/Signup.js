@@ -5,14 +5,15 @@ class Signup{
         this.nameInput = document.querySelector('#name');
         
         this.emailInput =document.querySelector('#email');
-        this.emailError = document.querySelector('.message-container:nth-child(1)')
+        this.emailError = document.querySelectorAll('.message-container')[0]
 
-        this.pwdInput = document.querySelector('#password');
-        this.pwdError = document.querySelector('.message-container:nth-child(2)')
+        this.passwordInput = document.querySelector('#password');
+        this.passwordError = document.querySelectorAll('.message-container')[1]
 
-        this.repeatpwdInput = document.querySelector('#repeat-password');
-        this.repeatPwdError = document.querySelector('.message-container:nth-child(3)')
+        this.repeatPasswordInput = document.querySelector('#repeat-password');
+        this.repeatPasswordError = document.querySelectorAll('.message-container')[2]
 
+        //this.repeatPasswordErrors = document.querySelectorAll('.message-container')
         this.buttonInput = document.querySelector('#signup-button')
     }
 
@@ -21,47 +22,109 @@ class Signup{
         const email = emailInput.value;
 
         //validation
+        validator.validateEmail(email);
+        validator.validateUniqueEmail(email);
 
         //send error
+        this.setErrorMessages();
 
     }
 
-    handlePwdInput=(event)=>{
-        const pwdInput = event.target;
-        const repeatPwdInput = this.repeatpwdInput;
+    handlePasswordInput=(event)=>{
+        const passwordInput = event.target;
+        const repeatPasswordInput = this.repeatPasswordInput;
 
-        const pwd = pwdInput.value;
-        const repeatPwd = repeatPwdInput
+        const password = passwordInput.value;
+        const repeatPassword = repeatPasswordInput.value;
 
         //validation
+        validator.validatePassword(password);
+        validator.validateRepeatPassword(password,repeatPassword);
+
 
         //send error
+        this.setErrorMessages();
     }
 
-    handleRepeatPwdInput = (event)=>{
-        const pwdInput = event.target;
-        const repeatPwdInput = this.repeatpwdInput;
+    handleRepeatPasswordInput = (event)=>{
+        const passwordInput = event.target;
+        const repeatPasswordInput = this.repeatPasswordInput;
 
-        const pwd = pwdInput.value;
-        const repeatPwd = repeatPwdInput
+        const password = passwordInput.value;
+        const repeatPassword = repeatPasswordInput.value;
 
         //validation
+        validator.validatePassword(password);
+        validator.validateRepeatPassword(password,repeatPassword);
 
         //send error
+        this.setErrorMessages();
     }
 
     setErrorMessages = () =>{
 
+        this.emailError.innerHTML = "";
+        this.passwordError.innerHTML= "";
+        this.repeatPasswordError.innerHTML ="";
+
+        //
+        const errorsObj = validator.getErrorsList();
+        const {invalidEmailError,passwordError,repeatPasswordError} = errorsObj;
+        console.log(invalidEmailError)
+        console.log(passwordError)
+        console.log(repeatPasswordError)
+
+        if(invalidEmailError){
+            this.emailError.innerHTML = invalidEmailError
+        }else{
+            this.emailError.innerHTML = ""
+        }
+
+        if(passwordError){
+            this.passwordError.innerHTML = passwordError
+        }else{
+            this.passwordError.innerHTML = ""
+        }
+
+        if(repeatPasswordError){
+            this.repeatPasswordError.innerHTML = repeatPasswordError
+        }else{
+            this.repeatPasswordError.innerHTML = ""
+        }
+        
+        
+     
+        
+
+    
+
     }
 
     saveData = (event) =>{
+        console.log(this.buttonInput)
+        event.preventDefault();
+
+        const name = this.nameInput.value;
+        const email = this.emailInput.value;
+        const password = this.passwordInput.value;
+
+        const newUser = new User(name,email,password);
+
+        db.saveNewUser(newUser);
+        console.log('data saved')
+
+        this.nameInput.value = "";
+        this.emailInput.value = "";
+        this.passwordInput.value = "";
+
+        
 
     }
 
     addListeners = () => {
         this.emailInput.addEventListener("input", this.handleEmailInput);
-        this.pwdInput.addEventListener("input", this.handlePwdInput);
-        this.repeatpwdInput.addEventListener("input", this.handleRepeatPwdInput);
+        this.passwordInput.addEventListener("input", this.handlePasswordInput);
+        this.repeatPasswordInput.addEventListener("input", this.handleRepeatPasswordInput);
         this.buttonInput.addEventListener("click", this.saveData);
       }
 
@@ -73,3 +136,4 @@ class Signup{
 const signup = new Signup();
 
 window.addEventListener('load', signup.addListeners )
+
