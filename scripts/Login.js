@@ -1,7 +1,7 @@
 "use strict";
 
 
-class Login {
+class Login { 
   constructor() {
     this.emailInput = document.querySelector("#email");
     this.passwordInput = document.querySelector("#password");
@@ -40,7 +40,8 @@ class Login {
     if (!user) {
       
       p.textContent = "Email or password is incorrect!";
-      
+      // this.loginButton.classList.remove('shake-horizontal')
+     this.loginButton.classList.add('shake-horizontal')
 
       //⚠️⚠️⚠️⚠️！！！！！
 
@@ -59,9 +60,12 @@ class Login {
     }
 
     this.messageContainer.appendChild(p);
-    // this.loginButton.classList.remove('shake-horizontal')
-    // this.loginButton.classList.add('shake-horizontal')
+    
 
+  }
+
+  handleShakeBtn=()=>{
+    this.loginButton.classList.remove('shake-horizontal')
   }
 
   handleSignup =(event) =>{
@@ -94,6 +98,7 @@ window.addEventListener('load', function () {
 
   login.loginButton.addEventListener('click', login.handleLogin );
   login.signupButton.addEventListener('click', login.handleSignup );
+  login.loginButton.addEventListener('animationend',login.handleShakeBtn);
 
 } )
 
