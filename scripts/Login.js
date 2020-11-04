@@ -33,11 +33,23 @@ class Login {
     // empty the container so that the messages don't add up
     this.messageContainer.innerHTML = "";
     const p = document.createElement('p');
+    // this.loginButton.setAttribute('button');
+
 
     // set the message
     if (!user) {
+      
       p.textContent = "Email or password is incorrect!";
+      
+
+      //⚠️⚠️⚠️⚠️！！！！！
+
+
+
+
+
     }
+
     else {
       
       p.textContent = `Hello ${user.name}!`;
@@ -47,6 +59,8 @@ class Login {
     }
 
     this.messageContainer.appendChild(p);
+    this.loginButton.classList.remove('shake-horizontal')
+    this.loginButton.classList.add('shake-horizontal')
 
   }
 

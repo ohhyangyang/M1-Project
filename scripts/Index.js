@@ -25,7 +25,7 @@ class Index {
   changeNavBar =()=> {
     if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
       this.navBarWrapper.style.backgroundColor = "white";
-      this.navBarWrapper.style.borderBottom = "0.5px gray solid";
+      this.navBarWrapper.style.borderBottom = "0.5px gainsboro solid";
     }else if(document.body.scrollTop == 0 || document.documentElement.scrollTop == 0){
       this.navBarWrapper.style.backgroundColor = "";
       this.navBarWrapper.style.borderBottom = "";

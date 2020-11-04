@@ -67,7 +67,7 @@ fetch(
           <span class="name">${el.name}</span>
           <span class="tag-list">${el.tag_list}</span>
            
-          <p class="description">${newStr}<a href="" class="showmore">...show more</a></sp>
+          <p class="description">&nbsp&nbsp&nbsp&nbsp${newStr}<a href="" class="showmore">&nbspshow more</a></sp>
           <span class="more-text">${removeStr}<a href="" class="showless">show less</a></span>
           `;
           
@@ -159,7 +159,7 @@ typeSelect.addEventListener("change", function (event) {
           <span class="name">${el.name}</span>
           <span class="tag-list">${el.tag_list}</span>
            
-          <p class="description">${newStr}<a href="" class="showmore">...show more</a></sp>
+          <p class="description">&nbsp&nbsp&nbsp&nbsp${newStr}<a href="" class="showmore">&nbspshow more</a></sp>
           <span class="more-text">${removeStr}<a href="" class="showless">show less</a></span>
           `;
           
@@ -204,6 +204,9 @@ typeSelect.addEventListener("change", function (event) {
         console.log(zeroItemsP);
         zeroItemsP.innerHTML = "Sorry, we don't have this product";
         zeroItemsImg.setAttribute("src", "./images/donthave.jpg");
+      }else{
+        zeroItemsP.innerHTML = "";
+        zeroItemsImg.setAttribute("src", "");
       }
       
 
@@ -211,11 +214,11 @@ typeSelect.addEventListener("change", function (event) {
 
     
 
-  function imgError(image) {
-    image.onerror = "";
-    image.src = "../images/benefit.png";
-    return true;
+  // function imgError(image) {
+  //   image.onerror = "";
+  //   image.src = "../images/benefit.png";
+  //   return true;
 
 
-  }
+  // }
 });
