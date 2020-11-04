@@ -59,8 +59,8 @@ class Login {
     }
 
     this.messageContainer.appendChild(p);
-    this.loginButton.classList.remove('shake-horizontal')
-    this.loginButton.classList.add('shake-horizontal')
+    // this.loginButton.classList.remove('shake-horizontal')
+    // this.loginButton.classList.add('shake-horizontal')
 
   }
 

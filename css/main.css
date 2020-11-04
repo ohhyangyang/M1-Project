@@ -88,6 +88,9 @@ nav {
   font-size: 25px;
   color: #06456e;
 }
+#nav-menu a:hover {
+  border-bottom: black 1px solid;
+}
 
 /*-------Footer--------*/
 footer {
@@ -138,38 +141,41 @@ footer p {
   flex-direction: column-reverse;
   padding: 15px;
   box-sizing: border-box;
-  
-  
 }
-
-.big-img-container h2{
+.big-img-container div{
+  display: flex;
+  flex-direction: row;
+}
+.big-img-container h2 {
   color: var(--white-color);
   font-size: 25px;
   font-family: IBM Plex Serif;
   font-style: italic;
   font-weight: 500;
   margin-bottom: 10px;
-
 }
 
-.big-img-container p{
+.big-img-container p {
   color: var(--white-color);
   font-style: italic;
 }
-.big-img-container img{
-  position: absolute;
+.big-img-container img {
+  /* position: absolute; */
   width: 50px;
-  right: 8vw;
-  bottom: 8vh;
+  /* right: 8vw;
+  bottom: 8vh; */
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
 
 @keyframes shake {
-  0% { transform: translate(1px, 1px); }
-  100% { transform: translate(1px, -4px); }
+  0% {
+    transform: translate(1px, 1px);
+  }
+  100% {
+    transform: translate(1px, -4px);
+  }
 }
-
 
 /* .type-a-container {
  
@@ -217,7 +223,7 @@ footer p {
     transform: rotate(360deg);
   }
 }
-.brands-gallery{
+.brands-gallery {
   box-sizing: border-box;
   padding: 20px;
   margin-bottom: 50px;
@@ -226,15 +232,14 @@ footer p {
   font-size: 25px;
   font-weight: 500;
   position: relative;
-  bottom:105px;
+  bottom: 105px;
   position: relative;
-
 }
 .brands-gallery h4 {
   font-size: 20px;
   font-weight: 500;
   position: relative;
-  bottom:30px;
+  bottom: 30px;
   margin-bottom: 50px;
   /* font-style: italic; */
   /* border: 1px black solid; */
@@ -243,23 +248,19 @@ footer p {
   color: black;
 }
 
-
-
-
-.brands-gallery a>img{
+.brands-gallery a > img {
   display: inline-block;
-  
+
   width: 40%;
-  margin:10px;
+  margin: 10px;
 }
-.brands-gallery a:last-child{
+.brands-gallery a:last-child {
   /* text-decoration: none; */
   color: #06456e;
 }
 
-
 /*-------Dashboard-MAIN--------*/
-.go-to-top img{
+.go-to-top img {
   width: 20px;
   position: fixed;
   border: 0.5px solid black;
@@ -319,17 +320,16 @@ footer p {
   font-weight: 300;
 }
 
-
-.products-container div img{
+.products-container div img {
   width: 15rem;
-  
 }
-.products-container{
+.products-container {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.product-box{
+.product-box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -338,16 +338,13 @@ footer p {
   margin-bottom: 20px;
 }
 
-.product-box .product-img{
+.product-box .product-img {
   margin: 20px;
 }
-.product-box .name{
+.product-box .name {
   font-size: 12px;
-  
-  
-  
 }
-.product-box .tag-list{
+.product-box .tag-list {
   font-style: italic;
   color: red;
   /* color: #fff; */
@@ -356,34 +353,31 @@ footer p {
   font-weight: 500;
   text-decoration: underline;
 }
-.product-box .description{
-  color:  gray;
+.product-box .description {
+  color: gray;
   font-size: 10px;
   font-weight: 300;
 }
-.product-box .more-text{
+.product-box .more-text {
   display: none;
-  color:  gray;
+  color: gray;
   font-size: 10px;
   font-weight: 300;
 }
-.product-box .showmore{
-  display:inline;
+.product-box .showmore {
+  display: inline;
   color: black;
 }
-.product-box .showless{
-  display:none;
+.product-box .showless {
+  display: none;
   color: black;
 }
 
-
-
-
-.dont-have-container img{
+.dont-have-container img {
   width: 15rem;
   margin: 20px 0;
 }
-.dont-have-container{
+.dont-have-container {
   margin: 30px 0;
   display: flex;
   flex-direction: column;
@@ -423,13 +417,12 @@ footer p {
   font-weight: 300;
   border-radius: 5px;
 }
-.message-container{
+.message-container {
   color: hotpink;
   font-size: 10px;
   font-style: italic;
   width: 80%;
   margin-top: 10px;
-  
 }
 .signup-container button {
   margin-top: 10px;
@@ -504,68 +497,67 @@ footer p {
   border: hotpink 1px solid;
 }
 
-
 .shake-horizontal {
-	-webkit-animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-	        animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  -webkit-animation: shake-horizontal 0.8s
+    cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
- @-webkit-keyframes shake-horizontal {
+@-webkit-keyframes shake-horizontal {
   0%,
   100% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   10%,
   30%,
   50%,
   70% {
     -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
+    transform: translateX(-10px);
   }
   20%,
   40%,
   60% {
     -webkit-transform: translateX(10px);
-            transform: translateX(10px);
+    transform: translateX(10px);
   }
   80% {
     -webkit-transform: translateX(8px);
-            transform: translateX(8px);
+    transform: translateX(8px);
   }
   90% {
     -webkit-transform: translateX(-8px);
-            transform: translateX(-8px);
+    transform: translateX(-8px);
   }
 }
 @keyframes shake-horizontal {
   0%,
   100% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   10%,
   30%,
   50%,
   70% {
     -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
+    transform: translateX(-10px);
   }
   20%,
   40%,
   60% {
     -webkit-transform: translateX(10px);
-            transform: translateX(10px);
+    transform: translateX(10px);
   }
   80% {
     -webkit-transform: translateX(8px);
-            transform: translateX(8px);
+    transform: translateX(8px);
   }
   90% {
     -webkit-transform: translateX(-8px);
-            transform: translateX(-8px);
+    transform: translateX(-8px);
   }
 }
-
 
 /*-------FAQs-MAIN--------*/
 
@@ -587,7 +579,7 @@ footer p {
 .faqs-container > p {
   font-weight: 300;
   /* text-align: justify; */
-} 
+}
 .faqs-container .question-card-container {
   display: table;
   margin: 20px auto;
@@ -597,7 +589,6 @@ footer p {
   height: 180px;
   display: flex;
   align-items: center;
-
 }
 .question-card-container p {
   font-family: IBM Plex Serif;
@@ -606,10 +597,9 @@ footer p {
   font-size: 20px;
   padding: 0 5px;
   color: var(--white-color);
-  
 }
 
-.question-card-container p a{
+.question-card-container p a {
   /* text-decoration: none; */
   color: hotpink;
 }
@@ -619,39 +609,217 @@ footer p {
 	        animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 } */
 
-
 .flip-horizontal-bottom {
-	-webkit-animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-	        animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  -webkit-animation: flip-horizontal-bottom 0.4s
+    cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    both;
 }
 
- @-webkit-keyframes flip-horizontal-bottom {
+@-webkit-keyframes flip-horizontal-bottom {
   0% {
     -webkit-transform: rotateX(0);
-            transform: rotateX(0);
+    transform: rotateX(0);
   }
   100% {
     -webkit-transform: rotateX(-180deg);
-            transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
   }
 }
 @keyframes flip-horizontal-bottom {
   0% {
     -webkit-transform: rotateX(0);
-            transform: rotateX(0);
+    transform: rotateX(0);
   }
   100% {
     -webkit-transform: rotateX(-180deg);
-            transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
   }
 }
 
-
-
-
-
-
 /* ------------media query--------------- */
-/* @media(min-width:768px){
+@media (min-width: 768px) {
+  /*--------------Nave bar------------*/
+  .brand-logo{
+    width: 200px;
+  }
+  .logo-burger-wrapper{
+    height: 150px;
+  }
+  .burger-icon {
+    display: none;
+  }
 
-} */
+  .slider-wrapper {
+    /* position: relative; */
+
+    right: 0vw;
+    background-color: transparent;
+  }
+  .close-icon {
+    display: none;
+  }
+  #nav-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 1vh;
+    right: 7vw;
+    font-weight: 300;
+  }
+  #nav-menu li {
+    margin-left: 20px;
+  }
+  #nav-menu a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+  }
+  /*---------------footer---------------*/
+  .footer-container {
+    padding: 30px;
+  }
+  .footer-container>div {
+    display: flex;
+    flex-direction: row;
+  }
+  .brand-logo-footer{
+    width: 200px;
+    margin-bottom: 50px;
+  }
+  .footer-container>div>div{
+    margin-right: 50px;
+  }
+  .footer-title{
+    font-size:40px
+  }
+  .footer-text{
+    font-size:25px
+  }
+  .followus-container img{
+    width: 40px;
+  }
+
+  /*---------------INDEX-Big Img---------------*/
+  .big-img-container div{
+    display: flex;
+    flex-direction: row;
+  }
+  .big-img-container h2 {
+    font-size: 60px;
+    font-family: IBM Plex Serif;
+    font-style: italic;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+
+  .big-img-container img {
+    right: 20vw;
+    bottom: 10vh;
+    height: 100%;
+  }
+
+  .big-img-container p {
+    color: var(--white-color);
+    font-style: italic;
+    font-size: 30px;
+    margin-bottom: 3rem;
+  }
+  /*-------INDEX- Brands Gallery--------*/
+  .spinning-circle{
+    width: 300px;
+  }
+  .brands-gallery p{
+    bottom:180px;
+    font-size: 50px;
+  }
+  .brands-gallery h4{
+    font-size: 40px;
+  }
+  .brands-gallery a > img{
+    width: 30%;
+    margin: 40px;
+  }
+  /*----------------Signup--------------*/ 
+  .signup-container{
+    background-size:1%;
+  }
+  .signup-bgcolor{
+    width: 60vw;
+    height: 60vh;
+    margin: 50px auto;
+    
+  }
+  .signup-container h3{
+    font-size: 40px;
+    padding: 3rem;
+  }
+  .signup-container input{
+    padding: 25px;
+    font-size: 25px;
+  }
+  .message-container{
+    font-size: 20px;
+  }
+  .signup-container button{
+    padding: 30px;
+    font-size: 25px;
+  }
+  /*----------------Login--------------*/ 
+  .login-container{
+    background-size:1%;
+  }
+  .login-bgcolor{
+    width: 60vw;
+    height: 60vh;
+    margin: 50px auto;
+  }
+  .login-container h3{
+    font-size: 40px;
+    padding: 3rem;
+  }
+  .login-container input{
+    padding: 25px;
+    font-size: 25px;
+    margin-top: 20px;
+  }
+  .login-container button{
+    padding: 30px;
+    font-size: 25px;
+  }
+  .login-container .welcome{
+    font-size: 40px;
+  }
+  .form-container p{
+    font-size: 25px;
+  }
+  /*----------------FAQs--------------*/  
+  .faqs-container{
+    height: 70vh;
+    background-size:1%;
+  }
+  .faqs-container h3 {
+    font-size: 40px;
+    padding: 50px 0 20px;
+  }
+  .faqs-container>div{
+    display: flex;
+    flex-direction: row;
+    
+  }
+  .faqs-container > p {
+    width: 50vw;
+    display: table;
+    margin:0 auto;
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  .faqs-container .question-card-container{
+    width: 20vw;
+    height: 20vw;
+  }
+
+ 
+}

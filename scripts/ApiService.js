@@ -68,7 +68,7 @@ fetch(
           <span class="tag-list">${el.tag_list}</span>
            
           <p class="description">&nbsp&nbsp&nbsp&nbsp${newStr}<a href="" class="showmore">&nbspshow more</a></sp>
-          <span class="more-text">${removeStr}<a href="" class="showless">show less</a></span>
+          <span class="more-text">${removeStr}<a href="" class="showless">&nbspshow less</a></span>
           `;
           
           const showMore = div.querySelector('.showmore')
@@ -160,7 +160,7 @@ typeSelect.addEventListener("change", function (event) {
           <span class="tag-list">${el.tag_list}</span>
            
           <p class="description">&nbsp&nbsp&nbsp&nbsp${newStr}<a href="" class="showmore">&nbspshow more</a></sp>
-          <span class="more-text">${removeStr}<a href="" class="showless">show less</a></span>
+          <span class="more-text">${removeStr}<a href="" class="showless">&nbspshow less</a></span>
           `;
           
           const showMore = div.querySelector('.showmore')
