@@ -122,7 +122,10 @@ nav {
 
 /*-------Footer--------*/
 footer {
-  background-color: var(--hazeblue-color);
+  /* background-color: var(--hazeblue-color); */
+  background-image: url(../images/footer.jpg);
+  background-size: cover;
+  
 }
 footer p {
   color: rgb(18, 25, 53);
@@ -275,10 +278,13 @@ footer p {
   bottom: 5vh;
 }
 .filter-container {
-  background-color: var(--hazeblue-color);
+  /* background-color: var(--hazeblue-color); */
+  background-image: url(../images/footer.jpg);
+  background-size: cover;
   padding: 0 15px;
   width: 100vw;
   box-sizing: border-box;
+  padding-bottom: 20px;
 }
 
 .type-select-wrapper {
@@ -442,6 +448,7 @@ footer p {
   background-color: hotpink;
   font-size: 16px;
   color: var(--white-color);
+  cursor: pointer;
 }
 
 /*-------Login-MAIN--------*/
@@ -497,12 +504,14 @@ footer p {
 .login-container #login-button {
   margin-bottom: 10px;
   background-color: hotpink;
+  cursor: pointer;
 }
 .login-container #signup-button {
   margin-bottom: 30px;
   background-color: var(--white-color);
   color: hotpink;
   border: hotpink 1px solid;
+  cursor: pointer;
 }
 
 .shake-horizontal {

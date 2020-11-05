@@ -7,15 +7,14 @@ class Signup {
 
     this.emailInput = document.querySelector("#email");
     this.emailError = document.querySelectorAll(".message-container")[1];
-    
 
     this.passwordInput = document.querySelector("#password");
     this.passwordError = document.querySelectorAll(".message-container")[2];
-    
 
     this.repeatPasswordInput = document.querySelector("#repeat-password");
-    this.repeatPasswordError = document.querySelectorAll(".message-container")[3];
-    
+    this.repeatPasswordError = document.querySelectorAll(
+      ".message-container"
+    )[3];
 
     this.welcomeMessage = document.querySelectorAll(".message-container")[4];
 
@@ -66,7 +65,7 @@ class Signup {
   };
 
   setErrorMessages = () => {
-      this.nameError.innerHTML=""
+    this.nameError.innerHTML = "";
     this.emailError.innerHTML = "";
     this.passwordError.innerHTML = "";
     this.repeatPasswordError.innerHTML = "";
@@ -74,11 +73,18 @@ class Signup {
 
     //
     const errorsObj = validator.getErrorsList();
-    const { invalidEmailError, passwordError, repeatPasswordError, welcomeMessage } = errorsObj;
+    const {
+      invalidEmailError,
+      passwordError,
+      repeatPasswordError,
+      welcomeMessage,
+    } = errorsObj;
 
     if (invalidEmailError) {
+      console.log(this.emailInput.value)
       this.emailError.innerHTML = invalidEmailError;
     } else {
+      console.log(this.emailInput.value)
       this.emailError.innerHTML = "";
     }
 
@@ -102,12 +108,21 @@ class Signup {
     const email = this.emailInput.value;
     const password = this.passwordInput.value;
 
+
+    
+
+
     const errorsObj = validator.getErrorsList();
     const { invalidEmailError, passwordError, repeatPasswordError } = errorsObj;
-
-    console.log(invalidEmailError);
-    console.log(passwordError);
-    console.log(repeatPasswordError);
+    //监听signup，未输入时，也报错
+    if(name==""&&email==""&&password==""){
+      this.emailError.innerHTML = invalidEmailError;
+      this.passwordError.innerHTML = passwordError;
+      this.repeatPasswordError.innerHTML = repeatPasswordError;
+    }
+    // console.log(invalidEmailError);
+    // console.log(passwordError);
+    // console.log(repeatPasswordError);
     if (
       name !== "" &&
       invalidEmailError == undefined &&
@@ -123,28 +138,27 @@ class Signup {
       this.repeatPasswordInput.value = "";
       this.welcomeMessage.innerHTML = `Welcome ${newUser.name}!`;
       this.redirect();
-
+    } else {
+      this.buttonInput.classList.add("shake-horizontal");
     }
-
-    
-
-
   };
 
-  redirect = () => {
-    setTimeout( function () {
-      location.assign("index.html")
-    }, 1000)
+  handleShakeBtn =()=>{
+    this.buttonInput.classList.remove('shake-horizontal');
   }
+
+  redirect = () => {
+    setTimeout(function () {
+      location.assign("index.html");
+    }, 1000);
+  };
 
   addListeners = () => {
     this.emailInput.addEventListener("input", this.handleEmailInput);
     this.passwordInput.addEventListener("input", this.handlePasswordInput);
-    this.repeatPasswordInput.addEventListener(
-      "input",
-      this.handleRepeatPasswordInput
-    );
+    this.repeatPasswordInput.addEventListener("input",this.handleRepeatPasswordInput);
     this.buttonInput.addEventListener("click", this.saveData);
+    this.buttonInput.addEventListener('animationend',this.handleShakeBtn);
   };
 }
 

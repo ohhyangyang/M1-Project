@@ -23,8 +23,10 @@ class Validator {
 
   validateEmail = (email) => {
       if(this.validateEmailSyntax(email)){
+          
           delete this.errors.invalidEmailError;
       }else{
+        
           this.errors.invalidEmailError = this.invalidEmailError;
       }
   };

@@ -41,7 +41,7 @@ const index = new Index();
 window.addEventListener('load', index.addListeners )
 window.addEventListener('load', index.changeNavBar )
 
-console.log(document.body.scrollTop)
+//console.log(document.body.scrollTop)
 
 // window.addEventListener('scroll', function(e) {
 //   console.log('test')
