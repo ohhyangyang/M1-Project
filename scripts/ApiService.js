@@ -8,8 +8,8 @@ const brandQuery = queryFilter.getQuery();
 //get productList wrapper
 const productsList = document.querySelector(".products-container");
 const itemsNumTag = document.querySelector(".items-length");
-console.log(productsList);
-const  descriptionMaxLength =200;
+//console.log(productsList);
+const  descriptionMaxLength =150;
 
 //let proxyUrl = "https://cors-anywhere.herokuapp.com/";
 proxyUrl = "";
@@ -31,14 +31,14 @@ fetch(
     
 
     data.forEach((el) => {
-      console.log(el);
+      //console.log(el);
         const div = document.createElement("div");
         div.setAttribute("class", "product-box");
         // console.log(el.description.length> descriptionMaxLength)
 
         //deal with description
        if(el.description.length <= descriptionMaxLength){
-          console.log('noreadmore')
+          //console.log('noreadmore')
           div.innerHTML = `       
         <img src="${el.image_link}" onerror ="imgError(this)" />
         
@@ -52,12 +52,12 @@ fetch(
 
         else if(el.description.length>descriptionMaxLength){
 
-          console.log('readmore')
+          //console.log('readmore')
 
           let newStr = el.description.slice(0,descriptionMaxLength);
           let removeStr = el.description.slice(descriptionMaxLength);
-          console.log(newStr)
-          console.log(removeStr)
+          //console.log(newStr)
+          //console.log(removeStr)
 
 
 
@@ -200,8 +200,8 @@ typeSelect.addEventListener("change", function (event) {
       console.log(productsList);
       // console.log(productsList.innerHTML);
       if (!productsList.innerHTML) {
-        console.log("test");
-        console.log(zeroItemsP);
+        //console.log("test");
+        //console.log(zeroItemsP);
         zeroItemsP.innerHTML = "Sorry, we don't have this product";
         zeroItemsImg.setAttribute("src", "./images/donthave.jpg");
       }else{

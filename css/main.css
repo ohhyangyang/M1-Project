@@ -40,9 +40,35 @@ nav {
   justify-content: space-between;
   padding: 30px 20px 20px;
   height: 100px;
-  transition: background-color 0.5s;
+  transition: 0.5s;
   /* background-color: var(--white-color); */
 }
+
+.shadow-drop-bottom {
+	-webkit-animation: shadow-drop-bottom 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: shadow-drop-bottom 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+ @-webkit-keyframes shadow-drop-bottom {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+  }
+}
+@keyframes shadow-drop-bottom {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+  }
+}
+
 
 .empty-div {
   width: 30px;
@@ -51,6 +77,7 @@ nav {
 .brand-logo {
   width: 150px;
   height: auto;
+  margin-top: -10px;
 }
 .burger-icon {
   width: 30px;
@@ -87,9 +114,12 @@ nav {
   text-decoration: none;
   font-size: 25px;
   color: #06456e;
+  padding-bottom: 3px;
+  
 }
 #nav-menu a:hover {
-  border-bottom: black 1px solid;
+  border-bottom:lightcyan 5px solid;
+  
 }
 
 /*-------Footer--------*/
@@ -161,7 +191,7 @@ footer p {
 }
 .big-img-container img {
   /* position: absolute; */
-  width: 50px;
+  width: 3rem;
   /* right: 8vw;
   bottom: 8vh; */
   animation: shake 0.6s;
@@ -173,7 +203,7 @@ footer p {
     transform: translate(1px, 1px);
   }
   100% {
-    transform: translate(1px, -20px);
+    transform: translate(1px, -10px);
   }
 }
 
@@ -253,6 +283,7 @@ footer p {
 
   width: 40%;
   margin: 10px;
+  cursor: pointer;
 }
 .brands-gallery a:last-child {
   /* text-decoration: none; */
@@ -333,35 +364,36 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80vw;
-  font-size: 15px;
+  width: 75vw;
+  /* font-size: 30px; */
   margin-bottom: 20px;
+  
 }
 
 .product-box .product-img {
   margin: 20px;
 }
 .product-box .name {
-  font-size: 12px;
+  font-size: 15px;
 }
 .product-box .tag-list {
   font-style: italic;
-  color: red;
+  color: gray;
   /* color: #fff; */
   margin: 5px;
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 500;
   text-decoration: underline;
 }
 .product-box .description {
   color: gray;
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 300;
 }
 .product-box .more-text {
   display: none;
   color: gray;
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 300;
 }
 .product-box .showmore {
@@ -374,7 +406,7 @@ footer p {
 }
 
 .dont-have-container img {
-  width: 15rem;
+  width: 80vw;
   margin: 20px 0;
 }
 .dont-have-container {
@@ -566,18 +598,22 @@ footer p {
   height: 100%;
   box-sizing: border-box;
   background-color: #f2d4d6;
-  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23a5b4c7' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+  /* background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23a5b4c7' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E"); */
+  background-image:url('../images/faqbg1.jpg') ;
+  background-size: cover;
   padding: 30px;
 }
 .faqs-container h3 {
+  font-weight: 500;
   display: table;
   margin: 0 auto;
   font-size: 25px;
-  font-weight: 500;
+  color: var(--white-color);
   margin-bottom: 20px;
 }
 .faqs-container > p {
   font-weight: 300;
+  color: var(--white-color);
   /* text-align: justify; */
 }
 .faqs-container .question-card-container {
@@ -589,22 +625,25 @@ footer p {
   height: 180px;
   display: flex;
   align-items: center;
+  padding: 10px;
+  
 }
 .faqs-container .question-card-container:hover{
-  
+  cursor: pointer;
+ /* background-color: indianred; */
 }
 .question-card-container p {
   font-family: IBM Plex Serif;
   font-style: italic;
   font-weight: 300;
-  font-size: 20px;
-  padding: 0 5px;
+  font-size: 18px;
+  /* padding: 0 5px; */
   color: var(--white-color);
 }
 
 .question-card-container p a {
   /* text-decoration: none; */
-  color: hotpink;
+  color: blanchedalmond;
 }
 
 /* .question-card-container:hover{
@@ -645,6 +684,7 @@ footer p {
   /*--------------Nave bar------------*/
   .brand-logo{
     width: 200px;
+    margin-top: 0px;
   }
   .logo-burger-wrapper{
     height: 150px;
@@ -658,6 +698,8 @@ footer p {
 
     right: 0vw;
     background-color: transparent;
+    height: 100px;
+
   }
   .close-icon {
     display: none;
@@ -677,7 +719,8 @@ footer p {
   }
   #nav-menu a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: 200;
     color: black;
   }
   /*---------------footer---------------*/
@@ -706,6 +749,9 @@ footer p {
   }
 
   /*---------------INDEX-Big Img---------------*/
+  .big-img-container{
+    padding: 3rem;
+  }
   .big-img-container div{
     display: flex;
     flex-direction: row;
@@ -722,6 +768,7 @@ footer p {
     right: 20vw;
     bottom: 10vh;
     height: 100%;
+    width: 6rem;
   }
 
   .big-img-container p {
@@ -745,9 +792,31 @@ footer p {
     width: 30%;
     margin: 40px;
   }
+  /*----------------Dashboard--------------*/ 
+  .products-container{
+    display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  }
+  .product-box{
+    width: 38vw;
+    padding: 2rem;
+  }
+ 
+  .product-box .name{
+    margin-top: 30px;
+    font-size: 20px;
+  }
+  .dont-have-container img {
+    width: 30rem;
+    
+ 
+  }
+
   /*----------------Signup--------------*/ 
   .signup-container{
-    background-size:1%;
+    background-size:1.5%;
   }
   .signup-bgcolor{
     width: 65vw;
@@ -776,7 +845,7 @@ footer p {
   }
   /*----------------Login--------------*/ 
   .login-container{
-    background-size:1%;
+    background-size:1.5%;
   }
   .login-bgcolor{
     width: 60vw;
@@ -806,29 +875,33 @@ footer p {
     font-size: 25px;
   }
   /*----------------FAQs--------------*/  
-  .faqs-container{
-    height: 70vh;
-    background-size:1%;
-  }
+ 
   .faqs-container h3 {
     font-size: 40px;
     padding: 50px 0 20px;
   }
-  .faqs-container>div{
-    display: flex;
-    flex-direction: row;
-    
-  }
+ 
   .faqs-container > p {
     width: 50vw;
     display: table;
     margin:0 auto;
-    font-size: 20px;
     margin-bottom: 50px;
+ 
   }
   .faqs-container .question-card-container{
-    width: 20vw;
-    height: 20vw;
+    width: 37vw;
+    height: 37vw;
+    margin-bottom: 3rem;
+    
+  }
+
+  .question-card-container p {
+    font-family: IBM Plex Serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 30px;
+    
+    
   }
 
  
