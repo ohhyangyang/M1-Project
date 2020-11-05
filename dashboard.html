@@ -19,6 +19,34 @@
 <body>
     <!----------NAV BAR----------------------->
 
+    <nav>
+        <div class="nav-container">
+
+            <div class="logo-burger-wrapper">
+
+                <!--burger icon-->
+                <a href="#"><img src="images/burger.png" alt="burgerMenu" class="burger-icon"></a>
+                <!--CosLib logo-->
+                <a href="index.html"><img src="images/coslib.svg" alt="CosLibLogo" class="brand-logo"></a>
+                <div class="empty-div"></div>
+
+            </div>
+
+            <div class="slider-wrapper">
+                <!--close-->
+                <a href="#"><img src="./images/close.png" alt="closeicon" class="close-icon"></a>
+                <!--nav menu-->
+                <ul id="nav-menu" class="hide-menu">
+                    <!-- <li><a href="dashboard.html">Beauty Library</a></li> -->
+                    <li><a href="signup.html">Sign up</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+    </nav>
     <!----------MAIN----------------------->
     <div class="menubar-height"></div>
     <main>
@@ -46,53 +74,11 @@
 
             <a href="#" class="go-to-top"><img src="./images/arrow.png" alt=""></a>
 
-            <!-- <div class="type-a-container">
-                    <a href="dashboard.html?product_type=blush" id="blush">Blush</a>
-                    <a href="dashboard.html?product_type=bronzer" id="bronzer">Bronzer</a>
-                    <a href="dashboard.html?product_type=eyebrow" id="eyebrow">Eyebrow</a>
-                    <a href="dashboard.html?product_type=eyeliner" id="eyeliner">Eyeliner</a>
-                    <a href="dashboard.html?product_type=eyeshadow" id="eyeshadow">Eyeshadow</a>
-                    <a href="dashboard.html?product_type=foundation" id="foundation">Foundation</a>
-                    <a href="dashboard.html?product_type=lip_liner" id="lip_liner">Lip liner</a>
-                    <a href="dashboard.html?product_type=lipstick" id="lipstick">Lipstick</a>
-                    <a href="dashboard.html?product_type=mascara" id="mascara">Mascara</a>
-                    <a href="dashboard.html?product_type=nail_polish" id="nail_polish">Nail polish</a>
-                    
-                </div> -->
-
-            <!-- <div class="type-list-wrapper">
-                <label for="typeList">Filter by types:</label>
-                <img src="./images/select arrow.png" alt="selectboxarrow" class="select-arrow">
-                <select id="typeList">
-                    <option value="">All types</option>
-                    <option value="">Blush</option>
-                    <option value="">Bronzer</option>
-                    <option value="">Eyebrow</option>
-                    <option value="">Eyeliner</option>
-                    <option value="">Eyeshadow</option>
-                    <option value="">Foundation</option>
-                    <option value="">Lip liner</option>
-                    <option value="">Lipstick</option>
-                    <option value="">Mascara</option>
-                    <option value="">Nail polish</option>
-                </select>
-            </div> -->
-
-            <!-- <input id="search-input" type="text" placeholder="Search.." style="user-select: auto;"> -->
-
-            <!-- <button>Reset</button> -->
+           
         </div>
 
         <div class="products-container">
-            <!-- <div class="product-box">
-                <img src="./images/benefit.png" alt="">
-                
-                    <span class="name">benefit</span>
-                    <span class="tag-list">vegan free</span>
-                
-
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque eum doloremque minima molestiae quae perspiciatis in velit vero quasi suscipit. Deleniti ipsam, temporibus quisquam est officiis tempora totam eveniet vero.</p>
-            </div> -->
+            
         </div>
         <div class="dont-have-container">
             <p></p>
@@ -106,8 +92,9 @@
 
     <script src="./scripts/QueryFilter.js"></script>
     <script src="./scripts/ApiService.js"></script>
+    <script src="./scripts/Index.js"></script>
 
-    <!----------FOOTER----------------------->
+    
 
 </body>
 
