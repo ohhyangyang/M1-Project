@@ -20,6 +20,12 @@
 - A more strict email validation fon sign up
 - The password reseter for the clients can't remember about the password, and server will send an email for the password reset
 
+## Languages
+
+- Javascript (ES6)
+- HTML & CSS3
+- AJAX fetch
+
 ## Wireframes
 
 - [My WrieFrame](https://balsamiq.cloud/sifmb5c/pq6fu8a)
