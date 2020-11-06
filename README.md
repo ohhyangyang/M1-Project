@@ -1,6 +1,6 @@
 # CosLib - M1 Project
 
-![](/Users/young/Desktop/01 WD Week 3 project/M1 project/images/readme.jpg)
+![](https://images.unsplash.com/photo-1554226629-2af69efaa2fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80)
 
 ## Description
 
@@ -8,10 +8,10 @@
 
 ## MVP (Minimum Viable Product)
 
-- **Home Page: ** It includes the navigation bar to search around the app, and the brand section leads you to view all the brands we have in Coslib
+- **Home Page:** It includes the navigation bar to search around the app, and the brand section leads you to view all the brands we have in Coslib
 - **Beauty Catalogue:** It's the best section of CosLib. Here you can sort out all the beauty products as you wish! :nail_care:
-- **Sign Up:** New users sign up here with the valid name, email and password
-- **Log In:** Customers log in here with the matching account
+- **Sign up:** New users sign up here with the valid name, email and password
+- **Log in:** Customers log in here with the matching account
 - **FAQ:** Wanna know more about CosLib? Click the question cards! :wink:
 
 ## Backlog
