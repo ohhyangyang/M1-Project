@@ -10,7 +10,7 @@ class Database {
             return [];
         }else {
             return usersArr
-        }
+        } 
     };
 
     saveNewUser = (newUser) => {
