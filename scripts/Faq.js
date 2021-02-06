@@ -33,7 +33,7 @@ questionCardsDiv[1].addEventListener('mouseover',()=>{
     questionCardsDiv[3].style.backgroundColor = "rgb(179, 197, 209)";
 
     questionCardsDiv[1].innerHTML= 
-    `<p style="transform:rotatex(180deg); ">More then 60, but we didn't post all of them. We will, when we find a better API than this.</p>`;
+    `<p style="transform:rotatex(180deg); ">More than 60, but we didn't post all of them. We will, when we find a better API than this.</p>`;
     questionCardsDiv[0].innerHTML= `<p>What is CosLib for?</p>`;
     questionCardsDiv[2].innerHTML= `<p>I’m a blogger, how can I get in touch with you?</p>`;
     questionCardsDiv[3].innerHTML= `<p>Who's the web designer? Your web looks so cool!</p>`;
